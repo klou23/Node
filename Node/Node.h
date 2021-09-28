@@ -41,4 +41,12 @@ public:
 	void set_parent(Node<T>* parent) {
 		this->parent = parent;
 	}
+
+	std::string to_string() {
+		return to_string(val);
+	}
+
+	bool equals(Node o) {
+		return this->val == o.val;
+	}
 };
