@@ -1,4 +1,14 @@
+/**
+ * Node.h
+ * Kevin Lou
+ * Sept. 28, 2021
+ *
+ * Generic Node class that contains a value and pointers to a child and parent node
+ */
+
 #pragma once
+
+#include <string>
 
 template <typename T>
 class Node {
@@ -43,7 +53,8 @@ public:
 	}
 
 	std::string to_string() {
-		return to_string(val);
+		if(typeid(val) == typeid(std::string)) return val;
+		return "";
 	}
 
 	bool equals(Node o) {
